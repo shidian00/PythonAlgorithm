@@ -1,7 +1,7 @@
 """
 Convert a string of characters to a sequence of numbers
 corresponding to the character's position in the English alphabet.
-Weak Ciphers
+
 https://www.dcode.fr/letter-number-cipher
 http://bestcodes.weebly.com/a1z26.html
 """
@@ -12,8 +12,9 @@ def encode(plain: str) -> list[int]:
     """
     >>> encode("myname")
     [13, 25, 14, 1, 13, 5]
+    
     >>> encode("testing")
-    [20,5,19,20,9,14,7]
+    [20, 5, 19 , 20 ,9 ,14 ,7]
     """
     return [ord(elem) - 96 for elem in plain]
 
@@ -22,7 +23,8 @@ def decode(encoded: list[int]) -> str:
     """
     >>> decode([13, 25, 14, 1, 13, 5])
     'myname'
-    >>> decode([20,5,19,20,9,14,7])
+    
+    >>> decode([20, 5, 19 ,20 , 9 , 14 ,7])
     'testing'
     """
     
