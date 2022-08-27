@@ -28,7 +28,6 @@ def decode(encoded: list[int]) -> str:
     >>> decode([4, 5, 13, 15, -64, -47, -46, -45])
     'demo 123'
     """
-    
     return "".join(chr(elem + 96) for elem in encoded)
 
 
