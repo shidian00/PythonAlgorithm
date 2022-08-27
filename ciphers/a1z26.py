@@ -1,6 +1,6 @@
 """
 Convert a string of characters to a sequence of numbers
-corresponding to the character's position in the alphabet.
+corresponding to the character's position in the English alphabet.
 
 https://www.dcode.fr/letter-number-cipher
 http://bestcodes.weebly.com/a1z26.html
