@@ -12,6 +12,8 @@ def encode(plain: str) -> list[int]:
     """
     >>> encode("myname")
     [13, 25, 14, 1, 13, 5]
+    >>> encode("testing")
+    [20,5,19,20,9,14,7]
     """
     return [ord(elem) - 96 for elem in plain]
 
@@ -20,7 +22,10 @@ def decode(encoded: list[int]) -> str:
     """
     >>> decode([13, 25, 14, 1, 13, 5])
     'myname'
+    >>> decode([20,5,19,20,9,14,7])
+    'testing'
     """
+    
     return "".join(chr(elem + 96) for elem in encoded)
 
 
