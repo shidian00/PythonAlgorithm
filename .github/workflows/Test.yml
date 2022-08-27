@@ -1,0 +1,26 @@
+name: "Test"
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools six wheel
+          python -m pip install pytest-cov flake8 -r requirements.txt
+      - name: Test with pytest and generate coverage report
+        run: pytest --doctest-modules --ignore=project_euler/ --ignore=scripts/validate_solutions.py --cov-report=xml --cov=. .
+      - name: Publish coverage report to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage.xml
+          name: codecov
