@@ -6,7 +6,6 @@ http://bestcodes.weebly.com/a1z26.html
 """
 from __future__ import annotations
 
-
 def encode(plain: str) -> list[int]:
     """
     >>> encode("myname")
@@ -16,7 +15,6 @@ def encode(plain: str) -> list[int]:
     """
     return [ord(elem) - 96 for elem in plain]
 
-
 def decode(encoded: list[int]) -> str:
     """
     >>> decode([13, 25, 14, 1, 13, 5])
@@ -24,15 +22,12 @@ def decode(encoded: list[int]) -> str:
     >>> decode([20, 5, 19, 20, 9, 14, 7])
     'testing'
     """
-    
     return "".join(chr(elem + 96) for elem in encoded)
-
 
 def main() -> None:
     encoded = encode(input("-> ").strip().lower())
     print("Encoded: ", encoded)
     print("Decoded:", decode(encoded))
-
 
 if __name__ == "__main__":
     main()
