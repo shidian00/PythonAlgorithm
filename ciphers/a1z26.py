@@ -18,9 +18,9 @@ def encode(plain: str) -> list[int]:
 def decode(encoded: list[int]) -> str:
     """
     >>> decode([13, 25, 14, 1, 13, 5])
-    'myname'
+    "myname"
     >>> decode([20, 5, 19, 20, 9, 14, 7])
-    'testing'
+    "testing"
     """
     return "".join(chr(elem + 96) for elem in encoded)
 
