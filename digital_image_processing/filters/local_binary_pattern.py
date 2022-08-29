@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
 
-# test
+
+# test precommit
 def get_neighbors_pixel(
     image: np.ndarray, x_coordinate: int, y_coordinate: int, center: int
 ) -> int:
