@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 
 
+# test precommit
 def get_neighbors_pixel(
     image: np.ndarray, x_coordinate: int, y_coordinate: int, center: int
 ) -> int:
@@ -60,7 +61,7 @@ def local_binary_value(image: np.ndarray, x_coordinate: int, y_coordinate: int) 
     )
 
 
-if __name__ == "main":
+if __name__ == "main":  # pragma: no cover
 
     # Reading the image and converting it to grayscale.
     image = cv2.imread(
