@@ -1,7 +1,7 @@
 # Converting Octal number to Binary
 
 # Defining a function that returns
-# binary equivalent of the number
+# Binary equivalent of the number
 def octal_to_binary(oct_num: int) -> str:
 
     """
